@@ -1,3 +1,75 @@
+:root {
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue: hsl(237, 14%, 26%);
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --very-light-gray: 0 0% 98%;
+    --very-light-grayish-blue: 236 33% 92%;
+    --light-grayish-blue: 233 11% 84%;
+    --dark-grayish-blue: 236 9% 61%;
+    --very-dark-grayish-blue: 235 19% 35%;
+    --dt-very-dark-blue: 235 21% 11%;
+    --dt-very-dark-desaturated-blue: 235 24% 19%;
+    --dt-light-grayish-blue: 234 39% 85%;
+    --dt-light-grayish-blue-hover: 236 33% 92%;
+    --dt-dark-grayish-blue: 234 11% 52%;
+    --dt-very-dark-grayish-blue: 233 14% 35%;
+    --dt-very-dark-grayish-blue2: 237 14% 26%;
+  }
+
+  html {
+    font-family: "Josefin Sans", system-ui, sans-serif;
+  }
+}
+
+.check-container {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid hsl(233, 14%, 35%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.check-container:hover {
+  border: 1px solid hsl(220, 98%, 61%);
+}
+
+.check-container .check-box {
+  opacity: 0;
+}
+.check-container .check-box:checked + .check {
+  background-image: url(C:\xampp\htdocs\todo-app\src\assets\images\icon-check.svg),
+    linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.check {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: inherit;
+  transform: translate(-50%, -50%);
+}
