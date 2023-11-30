@@ -92,8 +92,8 @@ function App() {
   }, [activeFilter, todos]);
 
   return (
-    <main className="w-full min-h-screen text-lg font-normal text-dtVeryDarkDesaturatedBlue dark:text-veryLightGray grid justify-items-center items-center p-6 md:p-8 bg-mobile-light bg-veryLightGray dark:bg-dtVeryDarkBlue dark:bg-mobile-dark min-[376px]:bg-desktop-light min-[376px]:dark:bg-desktop-dark bg-contain min-[376px]:bg-auto bg-top bg-no-repeat">
-      <section className="w-full max-w-[540px] flex flex-col gap-8 text-sm">
+    <main className="w-full min-h-screen text-lg font-normal text-dtVeryDarkDesaturatedBlue dark:text-veryLightGray grid justify-items-center items-center px-6 py-12 md:p-8 bg-mobile-light bg-veryLightGray dark:bg-dtVeryDarkBlue dark:bg-mobile-dark min-[376px]:bg-desktop-light min-[376px]:dark:bg-desktop-dark bg-contain min-[376px]:bg-auto bg-top bg-no-repeat">
+      <section className="w-full max-w-[540px] flex flex-col text-sm">
         <ToggleTheme />
         <TaskForm addTodo={addTodo} />
         <TaskList

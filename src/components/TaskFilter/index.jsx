@@ -10,9 +10,9 @@ export default function TaskFilter({
   handleClearComplete,
 }) {
   return (
-    <div className="flex items-center justify-between p-4 bg-gray-700 border-b border-solid border-gray-600">
+    <div className="h-[50px] flex items-center justify-between px-5 sm:px-6">
       <ItemsLeft total={total} />
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center gap-4">
         <FilterButton
           action={() => showAllTodos()}
           active={activeFilter}
@@ -32,7 +32,7 @@ export default function TaskFilter({
 
       <button
         onClick={() => handleClearComplete()}
-        className="text-gray-400 hover:text-white cursor-pointer transition-all duration-300 ease-in-out"
+        className="text-dtDarkGrayishBlue cursor-pointer transition-all duration-300 ease-in-out"
       >
         Clear Completed
       </button>
