@@ -30,7 +30,7 @@ export default function TaskList({
   showCompletedTodos,
 }) {
   return (
-    <div className="flex flex-col bg-[white] dark:bg-dtVeryDarkBlue rounded shadow-2xl">
+    <div className="flex flex-col bg-[white] dark:bg-dtVeryDarkDesaturatedBlue rounded shadow-2xl">
       {todos.map((todo) => (
         <TaskItem
           key={todo.id}

@@ -7,22 +7,32 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      title: "Watch the next Marvel Movie",
-      completed: false,
+      title: "Complete online JavaScript course",
+      completed: true,
     },
     {
       id: 2,
-      title: "Record the next Video",
+      title: "Jog around the park 3x",
       completed: false,
     },
     {
       id: 3,
-      title: "Wash the dishes",
+      title: "10 minutes meditation",
       completed: false,
     },
     {
       id: 4,
-      title: "Study 2 hours",
+      title: "Read for 1 hour",
+      completed: false,
+    },
+    {
+      id: 5,
+      title: "Pick up groceries",
+      completed: false,
+    },
+    {
+      id: 6,
+      title: "Complete Todo App on Frontend Mentor",
       completed: false,
     },
   ]);
@@ -92,8 +102,8 @@ function App() {
   }, [activeFilter, todos]);
 
   return (
-    <main className="w-full min-h-screen text-lg font-normal text-dtVeryDarkDesaturatedBlue dark:text-veryLightGray grid justify-items-center items-center px-6 py-12 md:p-8 bg-mobile-light bg-veryLightGray dark:bg-dtVeryDarkBlue dark:bg-mobile-dark min-[376px]:bg-desktop-light min-[376px]:dark:bg-desktop-dark bg-contain min-[376px]:bg-auto bg-top bg-no-repeat">
-      <section className="w-full max-w-[540px] flex flex-col text-sm">
+    <main className="w-full min-h-screen text-lg font-normal text-dtVeryDarkDesaturatedBlue dark:text-lightGrayishBlue grid justify-items-center items-center px-6 py-12 md:px-8 bg-mobile-light bg-veryLightGray dark:bg-dtVeryDarkBlue dark:bg-mobile-dark min-[376px]:bg-desktop-light min-[376px]:dark:bg-desktop-dark bg-contain min-[376px]:bg-auto bg-top bg-no-repeat">
+      <section className="w-full max-w-[540px] flex flex-col">
         <ToggleTheme />
         <TaskForm addTodo={addTodo} />
         <TaskList
@@ -106,6 +116,9 @@ function App() {
           handleDelete={handleDelete}
           handleClearComplete={handleClearComplete}
         />
+        <p className="mt-12 text-center text-dtDarkGrayishBlue">
+          Drag and drop to reorder list
+        </p>
       </section>
     </main>
   );

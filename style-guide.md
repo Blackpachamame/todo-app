@@ -44,16 +44,3 @@ The designs were created to the following widths:
 
 - Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
 - Weights: 400, 700
-
-
-Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list

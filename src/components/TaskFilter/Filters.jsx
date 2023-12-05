@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
 
 const ItemsLeft = ({ total }) => {
-  return <p className="text-dtDarkGrayishBlue text-sm">{total} items left</p>;
+  return (
+    <p className="text-dtDarkGrayishBlue text-[11px] sm:text-sm">
+      {total} items left
+    </p>
+  );
 };
 
 const FilterButton = ({ action, active, filter }) => {

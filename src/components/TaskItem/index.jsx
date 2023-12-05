@@ -6,8 +6,8 @@ export default function TaskItem({ todo, handleSetComplete, handleDelete }) {
   const { id, title, completed } = todo;
 
   return (
-    <div className="h-[52px] sm:h-16 flex items-center justify-between px-5 sm:px-6 bg-gray-700 border-b border-veryLightGrayishBlue dark:border-dtVeryDarkGrayishBlue2">
-      <div className="flex items-center gap-3">
+    <div className="h-[52px] sm:h-16 flex items-center justify-between gap-3 px-5 sm:px-6 bg-gray-700 border-b border-veryLightGrayishBlue dark:border-dtVeryDarkGrayishBlue2">
+      <div className="flex items-center gap-3 sm:gap-5 overflow-hidden">
         {completed ? (
           // <div
           //   onClick={() => handleSetComplete(id)}
@@ -22,11 +22,16 @@ export default function TaskItem({ todo, handleSetComplete, handleDelete }) {
         ) : (
           <span
             onClick={() => handleSetComplete(id)}
-            className={`w-5 h-5 sm:w-6 sm:h-6 border border-darkGrayishBlue border-solid rounded-full cursor-pointer`}
+            className="min-w-[20px] h-5 sm:min-w-[24px] sm:h-6 border border-lightGrayishBlue dark:border-dtVeryDarkGrayishBlue border-solid rounded-full cursor-pointer"
           ></span>
         )}
-
-        <p className={"pt-[3px] " + (completed && "line-through")}>{title}</p>
+        {completed ? (
+          <strike className="pt-[3px] text-[11px] sm:text-base text-darkGrayishBlue dark:text-dtVeryDarkGrayishBlue">
+            {title}
+          </strike>
+        ) : (
+          <p className="pt-[3px] text-[11px] sm:text-base truncate">{title}</p>
+        )}
       </div>
 
       <img

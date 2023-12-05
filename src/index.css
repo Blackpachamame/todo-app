@@ -38,25 +38,26 @@
 }
 
 .check-container {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 100%;
-  border: 1px solid hsl(233, 14%, 35%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* border: 1px solid hsl(233, 14%, 35%); */
+  /* background: hsl(0deg 100% 50%); */
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
   position: relative;
 }
-.check-container:hover {
+/* .check-container:hover {
   border: 1px solid hsl(220, 98%, 61%);
-}
+} */
 
 .check-container .check-box {
   opacity: 0;
 }
 .check-container .check-box:checked + .check {
-  background-image: url(C:\xampp\htdocs\todo-app\src\assets\images\icon-check.svg),
-    linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-image: url(/src/assets/images/icon-check.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -64,7 +65,7 @@
 .check {
   position: absolute;
   left: 50%;
-  top: 52%;
+  top: 54%;
   bottom: 0;
   right: 0;
   width: 100%;
