@@ -18,6 +18,7 @@ export default function TaskForm({ addTodo }) {
         className="w-full pt-[3px] bg-[white] dark:bg-dtVeryDarkDesaturatedBlue text-[11px] sm:text-base outline-none"
         type="text"
         value={title}
+        name="newTask"
         onChange={(e) => setTitle(e.target.value)}
         onKeyDown={(e) => handleAddTodo(e)}
         placeholder="Create a new todo..."

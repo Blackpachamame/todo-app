@@ -11,17 +11,19 @@ export default function TaskItem({ todo, handleSetComplete, handleDelete }) {
         <button
           onClick={() => handleSetComplete(id)}
           className={
-            `relative min-w-[20px] h-5 sm:min-w-[24px] sm:h-6 border border-lightGrayishBlue dark:border-dtVeryDarkGrayishBlue border-solid rounded-full cursor-pointer ` +
+            `border-gradient relative min-w-[20px] h-5 sm:min-w-[24px] sm:h-6 border border-lightGrayishBlue dark:border-dtVeryDarkGrayishBlue border-solid rounded-full cursor-pointer ` +
             (completed ? "check" : " ")
           }
         >
-          <img
-            className="w-[9px] h-[7px] sm:w-[11px] sm:h-[9px] absolute top-2/4 left-2/4 translate-x-[-45%] translate-y-[-45%]"
-            src={iconCheck}
-            alt="Check Icon"
-            width={11}
-            height={9}
-          />
+          {completed && (
+            <img
+              className="w-[9px] h-[7px] sm:w-[11px] sm:h-[9px] absolute top-2/4 left-2/4 translate-x-[-45%] translate-y-[-45%]"
+              src={iconCheck}
+              alt="Check Icon"
+              width={11}
+              height={9}
+            />
+          )}
         </button>
         {completed ? (
           <strike className="pt-[3px] text-[11px] sm:text-base text-darkGrayishBlue dark:text-dtVeryDarkGrayishBlue">
