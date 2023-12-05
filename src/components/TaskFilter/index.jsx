@@ -32,7 +32,7 @@ export default function TaskFilter({
 
       <button
         onClick={() => handleClearComplete()}
-        className="text-dtDarkGrayishBlue text-[11px] sm:text-sm cursor-pointer transition-all duration-300 ease-in-out"
+        className="pt-1 text-dtDarkGrayishBlue hover:text-dtLightGrayishBlueHover text-[11px] sm:text-sm cursor-pointer transition-all duration-300 ease-in-out"
       >
         Clear Completed
       </button>

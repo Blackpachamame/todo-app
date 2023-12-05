@@ -15,6 +15,8 @@ export default {
       }
     },
     colors: {
+      brightBlue: 'hsl(var(--bright-blue) / <alpha-value>)',
+
       veryLightGray: 'hsl(var(--very-light-gray) / <alpha-value>)',
       veryLightGrayishBlue: 'hsl(var(--very-light-grayish-blue) / <alpha-value>)',
       lightGrayishBlue: 'hsl(var(--light-grayish-blue) / <alpha-value>)',
