@@ -24,7 +24,7 @@ export default function ToggleTheme() {
 
   return (
     <header className="w-full flex justify-between items-center">
-      <h1 className="text-veryLightGray text-[26px] sm:text-[40px] font-bold uppercase tracking-[10px] sm:tracking-[14px] pt-2 sm:pt-[10px]">
+      <h1 className="text-veryLightGray text-[26px] sm:text-[40px] font-bold leading-none uppercase tracking-[10px] sm:tracking-[14px] pt-2 sm:pt-[10px]">
         Todo
       </h1>
 

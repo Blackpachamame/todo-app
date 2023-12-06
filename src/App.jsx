@@ -102,7 +102,7 @@ function App() {
   }, [activeFilter, todos]);
 
   return (
-    <main className="w-full min-h-screen font-normal text-dtVeryDarkDesaturatedBlue dark:text-lightGrayishBlue grid justify-items-center items-center px-6 py-12 md:px-8 bg-mobile-light bg-veryLightGray dark:bg-dtVeryDarkBlue dark:bg-mobile-dark min-[376px]:bg-desktop-light min-[376px]:dark:bg-desktop-dark bg-contain min-[376px]:bg-auto bg-top bg-no-repeat">
+    <main className="w-full min-h-screen font-normal text-dtVeryDarkDesaturatedBlue dark:text-lightGrayishBlue grid justify-items-center items-center px-6 py-[40px] md:px-8 bg-mobile-light bg-veryLightGray dark:bg-dtVeryDarkBlue dark:bg-mobile-dark min-[376px]:bg-desktop-light min-[376px]:dark:bg-desktop-dark bg-contain min-[376px]:bg-auto bg-top bg-no-repeat">
       <section className="w-full max-w-[540px] flex flex-col">
         <ToggleTheme />
         <TaskForm addTodo={addTodo} />
@@ -116,7 +116,7 @@ function App() {
           handleDelete={handleDelete}
           handleClearComplete={handleClearComplete}
         />
-        <p className="mt-12 text-center text-dtDarkGrayishBlue">
+        <p className="mt-[100px] sm:mt-[42px] text-sm text-center text-dtDarkGrayishBlue">
           Drag and drop to reorder list
         </p>
       </section>
