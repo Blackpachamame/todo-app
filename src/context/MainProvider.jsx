@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { MainContext } from "./MainContext";
-import tasksArray from "../assets/data/tasks";
+import { tasksArray } from "../assets/data/tasks";
 
 export const MainProvider = ({ children }) => {
   const [tasks, setTasks] = useState(getInitialTask);
@@ -11,21 +11,15 @@ export const MainProvider = ({ children }) => {
     return savedTasks ? JSON.parse(savedTasks) : tasksArray;
   }
 
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
   const [activeFilter, setActiveFilter] = useState("all");
+  const [filteredTask, setFilteredTask] = useState(tasks);
 
-  const addTask = (title) => {
-    const lastId = tasks.length > 0 ? tasks[tasks.length - 1].id : 1;
-
-    const newTask = {
-      id: lastId + 1,
-      title,
-      completed: false,
-    };
-
-    const todoList = [...tasks];
-    todoList.push(newTask);
-
-    setTasks(todoList);
+  const addTask = (nuevaTask) => {
+    setTasks([...tasks, nuevaTask]);
   };
 
   const handleSetComplete = (id) => {
@@ -63,20 +57,20 @@ export const MainProvider = ({ children }) => {
 
   useEffect(() => {
     if (activeFilter === "all") {
-      setTasks(tasks);
+      setFilteredTask(tasks);
     } else if (activeFilter === "active") {
       const activeTasks = tasks.filter((todo) => todo.completed === false);
-      setTasks(activeTasks);
+      setFilteredTask(activeTasks);
     } else if (activeFilter === "completed") {
       const completedTasks = tasks.filter((todo) => todo.completed === true);
-      setTasks(completedTasks);
+      setFilteredTask(completedTasks);
     }
   }, [activeFilter, tasks]);
 
   return (
     <MainContext.Provider
       value={{
-        tasks,
+        filteredTask,
         activeFilter,
         addTask,
         showAllTasks,

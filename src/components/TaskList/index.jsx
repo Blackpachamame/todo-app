@@ -4,11 +4,11 @@ import TaskItem from "../TaskItem";
 import TaskFilter from "../TaskFilter";
 
 export default function TaskList() {
-  const { tasks } = useContext(MainContext);
+  const { filteredTask } = useContext(MainContext);
 
   return (
     <div className="flex flex-col bg-[white] dark:bg-dtVeryDarkDesaturatedBlue rounded-[5px] shadow-2xl">
-      {tasks.map((todo) => (
+      {filteredTask.map((todo) => (
         <TaskItem key={todo.id} todo={todo} />
       ))}
       <TaskFilter />

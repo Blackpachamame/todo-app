@@ -1,34 +1,34 @@
-const tasks = [
+import { v4 as uuid } from 'uuid';
+
+export const tasksArray = [
     {
-        id: 1,
+        id: uuid(),
         title: "Complete online JavaScript course",
         completed: true,
     },
     {
-        id: 2,
+        id: uuid(),
         title: "Jog around the park 3x",
         completed: false,
     },
     {
-        id: 3,
+        id: uuid(),
         title: "10 minutes meditation",
         completed: false,
     },
     {
-        id: 4,
+        id: uuid(),
         title: "Read for 1 hour",
         completed: false,
     },
     {
-        id: 5,
+        id: uuid(),
         title: "Pick up groceries",
         completed: false,
     },
     {
-        id: 6,
+        id: uuid(),
         title: "Complete Todo App on Frontend Mentor",
         completed: false,
     },
 ];
-
-export default tasks;

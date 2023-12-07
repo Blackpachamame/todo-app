@@ -1,13 +1,19 @@
 import { useState, useContext } from "react";
 import { MainContext } from "./../../context/MainContext";
+import { v4 as uuidv4 } from "uuid";
 
 export default function TaskForm() {
   const [title, setTitle] = useState("");
   const { addTask } = useContext(MainContext);
 
   const handleAddTask = (e) => {
+    let nuevaTask = {
+      id: uuidv4(),
+      title,
+      completed: false,
+    };
     if (e.key.toLowerCase() === "enter") {
-      addTask(title);
+      addTask(nuevaTask);
       setTitle("");
     }
   };

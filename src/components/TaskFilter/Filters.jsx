@@ -3,10 +3,10 @@ import { MainContext } from "./../../context/MainContext";
 import PropTypes from "prop-types";
 
 const ItemsLeft = () => {
-  const { tasks } = useContext(MainContext);
+  const { filteredTask } = useContext(MainContext);
 
-  let tasksCompleted = tasks.filter(function (task) {
-    return task.completed;
+  let tasksCompleted = filteredTask.filter(function (task) {
+    return task.completed === false;
   });
 
   return (
