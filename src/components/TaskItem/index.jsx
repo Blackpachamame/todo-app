@@ -1,9 +1,11 @@
+import { useContext } from "react";
+import { MainContext } from "./../../context/MainContext";
 import PropTypes from "prop-types";
-import { iconCheck } from "../../assets/images";
-import { iconCross } from "../../assets/images";
+import { iconCheck, iconCross } from "../../assets/images";
 
-export default function TaskItem({ todo, handleSetComplete, handleDelete }) {
+export default function TaskItem({ todo }) {
   const { id, title, completed } = todo;
+  const { handleSetComplete, handleDelete } = useContext(MainContext);
 
   return (
     <div className="task h-[52px] sm:h-16 flex items-center justify-between gap-3 px-5 sm:px-6 border-b border-veryLightGrayishBlue dark:border-dtVeryDarkGrayishBlue2">
@@ -48,6 +50,4 @@ export default function TaskItem({ todo, handleSetComplete, handleDelete }) {
 
 TaskItem.propTypes = {
   todo: PropTypes.object,
-  handleSetComplete: PropTypes.func,
-  handleDelete: PropTypes.func,
 };

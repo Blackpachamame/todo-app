@@ -1,12 +1,13 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
+import { useState, useContext } from "react";
+import { MainContext } from "./../../context/MainContext";
 
-export default function TaskForm({ addTodo }) {
+export default function TaskForm() {
   const [title, setTitle] = useState("");
+  const { addTask } = useContext(MainContext);
 
-  const handleAddTodo = (e) => {
+  const handleAddTask = (e) => {
     if (e.key.toLowerCase() === "enter") {
-      addTodo(title);
+      addTask(title);
       setTitle("");
     }
   };
@@ -20,13 +21,9 @@ export default function TaskForm({ addTodo }) {
         value={title}
         name="newTask"
         onChange={(e) => setTitle(e.target.value)}
-        onKeyDown={(e) => handleAddTodo(e)}
+        onKeyDown={(e) => handleAddTask(e)}
         placeholder="Create a new todo..."
       />
     </div>
   );
 }
-
-TaskForm.propTypes = {
-  addTodo: PropTypes.func,
-};

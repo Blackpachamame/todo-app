@@ -1,32 +1,34 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import { MainContext } from "./../../context/MainContext";
 import { FilterButton, ItemsLeft } from "./Filters";
 
-export default function TaskFilter({
-  total,
-  activeFilter,
-  showAllTodos,
-  showActiveTodos,
-  showCompletedTodos,
-  handleClearComplete,
-}) {
+export default function TaskFilter() {
+  const {
+    activeFilter,
+    showAllTasks,
+    showActiveTasks,
+    showCompletedTasks,
+    handleClearComplete,
+  } = useContext(MainContext);
+
   return (
     <div className="h-[50px] relative flex items-center justify-between px-5 sm:px-6">
-      <ItemsLeft total={total} />
+      <ItemsLeft />
       <div className="sm:w-0 w-full h-[48px] absolute top-0 left-0 translate-y-[70px] sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 bg-[white] dark:bg-dtVeryDarkDesaturatedBlue flex justify-center items-center gap-5 rounded-[5px] shadow-2xl sm:shadow-none">
         <FilterButton
-          action={() => showAllTodos()}
+          action={() => showAllTasks()}
           active={activeFilter}
-          filter="All"
+          filtro="All"
         />
         <FilterButton
-          action={() => showActiveTodos()}
+          action={() => showActiveTasks()}
           active={activeFilter}
-          filter="Active"
+          filtro="Active"
         />
         <FilterButton
-          action={() => showCompletedTodos()}
+          action={() => showCompletedTasks()}
           active={activeFilter}
-          filter="Completed"
+          filtro="Completed"
         />
       </div>
       <button
@@ -38,12 +40,3 @@ export default function TaskFilter({
     </div>
   );
 }
-
-TaskFilter.propTypes = {
-  total: PropTypes.number,
-  activeFilter: PropTypes.string,
-  showAllTodos: PropTypes.func,
-  showActiveTodos: PropTypes.func,
-  showCompletedTodos: PropTypes.func,
-  handleClearComplete: PropTypes.func,
-};
