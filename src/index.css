@@ -48,9 +48,20 @@
   border: none;
 }
 
-.border-gradient:hover {
+.border-gradient.light:hover {
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+  border: 1px solid transparent;
+  border-image-source: linear-gradient(white, white);
+}
+
+.border-gradient.dark:hover {
   background: linear-gradient(#25273c, #25273c) padding-box,
     linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
   border: 1px solid transparent;
   border-image-source: linear-gradient(white, white);
+}
+
+.border-gradient:hover .imgCheck {
+  opacity: 0;
 }

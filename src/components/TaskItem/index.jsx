@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { MainContext } from "../../context/Main/MainContext";
+import { ThemeContext } from "../../context/Theme/ThemeContext";
 import PropTypes from "prop-types";
 import { iconCheck, iconCross } from "../../assets/images";
 
 export default function TaskItem({ todo }) {
   const { id, title, completed } = todo;
   const { handleSetComplete, handleDelete } = useContext(MainContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <div className="task h-[52px] sm:h-16 flex items-center justify-between gap-3 px-5 sm:px-6 border-b border-veryLightGrayishBlue dark:border-dtVeryDarkGrayishBlue2">
@@ -14,12 +16,13 @@ export default function TaskItem({ todo }) {
           onClick={() => handleSetComplete(id)}
           className={
             `border-gradient relative min-w-[20px] h-5 sm:min-w-[24px] sm:h-6 border border-lightGrayishBlue dark:border-dtVeryDarkGrayishBlue border-solid rounded-full cursor-pointer ` +
-            (completed ? "check" : " ")
+            (completed ? "check " : " ") +
+            (theme === "light" ? "light" : "dark")
           }
         >
           {completed && (
             <img
-              className="w-[9px] h-[7px] sm:w-[11px] sm:h-[9px] absolute top-2/4 left-2/4 translate-x-[-45%] translate-y-[-45%]"
+              className="imgCheck w-[9px] h-[7px] sm:w-[11px] sm:h-[9px] absolute top-2/4 left-2/4 translate-x-[-45%] translate-y-[-45%]"
               src={iconCheck}
               alt="Check Icon"
               width={11}
