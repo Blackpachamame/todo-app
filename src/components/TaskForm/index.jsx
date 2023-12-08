@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { MainContext } from "./../../context/MainContext";
+import { MainContext } from "../../context/Main/MainContext";
 import { v4 as uuidv4 } from "uuid";
 
 export default function TaskForm() {

@@ -1,26 +1,9 @@
-import { useState, useEffect } from "react";
-import { iconSun } from "../../assets/images";
-import { iconMoon } from "../../assets/images";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/Theme/ThemeContext";
+import { iconSun, iconMoon } from "../../assets/images";
 
 export default function ToggleTheme() {
-  const [theme, setTheme] = useState(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-    return "light";
-  });
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.querySelector("html").classList.add("dark");
-    } else {
-      document.querySelector("html").classList.remove("dark");
-    }
-  }, [theme]);
-
-  const handleChangeTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
+  const { theme, handleChangeTheme } = useContext(ThemeContext);
 
   return (
     <header className="w-full flex justify-between items-center">

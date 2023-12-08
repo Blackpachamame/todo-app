@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import { MainContext } from "./MainContext";
-import { tasksArray } from "../assets/data/tasks";
+import PropTypes from "prop-types";
+import { tasksArray } from "../../assets/data/tasks";
 
 export const MainProvider = ({ children }) => {
   const [tasks, setTasks] = useState(getInitialTask);

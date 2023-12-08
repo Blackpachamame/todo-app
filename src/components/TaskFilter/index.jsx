@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MainContext } from "./../../context/MainContext";
+import { MainContext } from "../../context/Main/MainContext";
 import { FilterButton, ItemsLeft } from "./Filters";
 
 export default function TaskFilter() {

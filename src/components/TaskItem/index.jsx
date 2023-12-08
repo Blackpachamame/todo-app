@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MainContext } from "./../../context/MainContext";
+import { MainContext } from "../../context/Main/MainContext";
 import PropTypes from "prop-types";
 import { iconCheck, iconCross } from "../../assets/images";
 
