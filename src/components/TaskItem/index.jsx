@@ -28,7 +28,7 @@ export default function TaskItem({ todo }) {
           )}
         </button>
         {completed ? (
-          <strike className="pt-[3px] text-xs sm:text-lg text-darkGrayishBlue dark:text-dtVeryDarkGrayishBlue">
+          <strike className="pt-[3px] text-xs sm:text-lg truncate text-darkGrayishBlue dark:text-dtVeryDarkGrayishBlue">
             {title}
           </strike>
         ) : (

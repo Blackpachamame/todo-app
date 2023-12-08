@@ -63,7 +63,7 @@ Sus usuarios deberían poder:
 
 ### Lo que aprendí
 
-- A completar...
+- Profundice las clases con Tailwind, por ejemplo, la clase `truncate` es un conjunto de propiedades de CSS: `overflow: hidden`, `white-space: nowrap`, `text-overflow: ellipsis`. Con ellas podemos evitar que un texto se desborde y salga del contenedor.
 
 ### Recursos útiles
 
