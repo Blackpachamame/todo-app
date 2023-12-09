@@ -70,7 +70,9 @@ export const MainProvider = ({ children }) => {
   return (
     <MainContext.Provider
       value={{
+        setTasks,
         filteredTask,
+        setFilteredTask,
         activeFilter,
         addTask,
         showAllTasks,

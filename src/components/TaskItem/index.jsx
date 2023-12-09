@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { MainContext } from "../../context/Main/MainContext";
 import { ThemeContext } from "../../context/Theme/ThemeContext";
+import { useSortable } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 import PropTypes from "prop-types";
 import { iconCheck, iconCross } from "../../assets/images";
 
@@ -9,8 +11,22 @@ export default function TaskItem({ todo }) {
   const { handleSetComplete, handleDelete } = useContext(MainContext);
   const { theme } = useContext(ThemeContext);
 
+  const { attributes, listeners, setNodeRef, transform, transition } =
+    useSortable({ id: id });
+
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+  };
+
   return (
-    <div className="task h-[52px] sm:h-16 flex items-center justify-between gap-3 px-5 sm:px-6 border-b border-veryLightGrayishBlue dark:border-dtVeryDarkGrayishBlue2">
+    <div
+      style={style}
+      ref={setNodeRef}
+      {...attributes}
+      {...listeners}
+      className="task h-[52px] sm:h-16 bg-[white] dark:bg-dtVeryDarkDesaturatedBlue flex items-center justify-between gap-3 px-5 sm:px-6 first:rounded-t-[5px] border-b border-veryLightGrayishBlue dark:border-dtVeryDarkGrayishBlue2"
+    >
       <div className="flex items-center gap-3 sm:gap-5 overflow-hidden">
         <button
           onClick={() => handleSetComplete(id)}
