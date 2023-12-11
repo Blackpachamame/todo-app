@@ -60,15 +60,17 @@ Sus usuarios deberían poder:
 - React
 - JavaScript
 - Tailwind CSS
+- Dnd kit
 
 ### Lo que aprendí
 
 - Profundice las clases con Tailwind, por ejemplo, la clase `truncate` es un conjunto de propiedades de CSS: `overflow: hidden`, `white-space: nowrap`, `text-overflow: ellipsis`. Con ellas podemos evitar que un texto se desborde y salga del contenedor.
+- Items `drag and drop` con `dnd kit`
 
 ### Recursos útiles
 
-- [Comunidad](https://www.frontendmentor.io/solutions) - La posibilidad de poder ver las soluciones y los comentarios de otros usuarios me ayudo a ajustar algunos detalles que no tenía en cuenta.
-- [Post](https://medium.com/frontend-mentor/how-to-get-the-most-out-of-frontend-mentor-bdd6fdc25cb8) - Cómo aprovechar al máximo Frontend Mentor.
+- [Dnd kit](https://dndkit.com/) - Documentación.
+- [Dnd Kit - Drag and Drop en React](https://www.youtube.com/watch?v=swFjfjLXe3I) - Tutorial.
 
 ## Autor
 
