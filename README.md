@@ -7,7 +7,7 @@
 <div align="center">
 <img src="./src/assets/design/desktop-preview.jpg"></img>
   <h3>
-    <a href="#">
+    <a href="https://todo-app-neon-kappa.vercel.app/">
       En Vivo
     </a>
     <span> | </span>
@@ -51,7 +51,7 @@ Sus usuarios deberían poder:
 - Ver el diseño óptimo según el tamaño de la pantalla de su dispositivo
 - Ver estados de desplazamiento para elementos interactivos
 - **Bonus:** Drag and drop para reordenar los elementos de la lista
-- **Bonus:** Cree este proyecto como una aplicación full-stack
+- **Bonus:** ~~Cree este proyecto como una aplicación full-stack~~
 
 ## Mi Procedimiento
 
@@ -70,7 +70,7 @@ Sus usuarios deberían poder:
 ### Recursos útiles
 
 - [Dnd kit](https://dndkit.com/) - Documentación.
-- [Dnd Kit - Drag and Drop en React](https://www.youtube.com/watch?v=swFjfjLXe3I) - Tutorial.
+- [Fazt Code - Drag and Drop en React](https://www.youtube.com/watch?v=swFjfjLXe3I) - Tutorial de Dnd Kit.
 
 ## Autor
 
