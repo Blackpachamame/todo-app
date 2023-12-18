@@ -29,6 +29,7 @@ export default function TaskItem({ todo }) {
     >
       <div className="flex items-center gap-3 sm:gap-5 overflow-hidden">
         <button
+          name="item-check"
           onClick={() => handleSetComplete(id)}
           className={
             `border-gradient relative min-w-[20px] h-5 sm:min-w-[24px] sm:h-6 border border-lightGrayishBlue dark:border-dtVeryDarkGrayishBlue border-solid rounded-full cursor-pointer ` +
