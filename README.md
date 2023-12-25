@@ -67,6 +67,10 @@ Sus usuarios deberían poder:
 - Profundice las clases con Tailwind, por ejemplo, la clase `truncate` es un conjunto de propiedades de CSS: `overflow: hidden`, `white-space: nowrap`, `text-overflow: ellipsis`. Con ellas podemos evitar que un texto se desborde y salga del contenedor.
 - Items `drag and drop` con `dnd kit`
 
+### Lo que falto
+
+- Que el orden de las tareas se mantenga al actualizar la página luego de reordenarlas con drag and drop
+
 ### Recursos útiles
 
 - [Dnd kit](https://dndkit.com/) - Documentación.
