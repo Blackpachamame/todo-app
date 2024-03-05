@@ -17,7 +17,7 @@ import TaskItem from "../TaskItem";
 import TaskFilter from "../TaskFilter";
 
 export default function TaskList() {
-  const { filteredTask, setFilteredTask } = useContext(MainContext);
+  const { filteredTask, setFilteredTask, setTasks } = useContext(MainContext);
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -35,6 +35,7 @@ export default function TaskList() {
 
     const newOrder = arrayMove(filteredTask, oldIndex, newIndex);
     setFilteredTask(newOrder);
+    setTasks(newOrder);
   };
 
   return (
