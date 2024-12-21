@@ -39,7 +39,8 @@
   }
 }
 
-.task:hover .close {
+.task:hover .close,
+button:focus .close {
   opacity: 1;
 }
 

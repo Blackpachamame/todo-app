@@ -56,14 +56,15 @@ export default function TaskItem({ todo }) {
         )}
       </div>
 
-      <img
-        onClick={() => handleDelete(id)}
-        className="close w-3 h-3 sm:w-[18px] sm:h-[18px] cursor-pointer opacity-0 transition-all duration-300 ease-in"
-        src={iconCross}
-        alt="Close Icon"
-        width={18}
-        height={18}
-      />
+      <button onClick={() => handleDelete(id)}>
+        <img
+          className="close w-3 h-3 sm:w-[18px] sm:h-[18px] cursor-pointer opacity-0 transition-all duration-300 ease-in"
+          src={iconCross}
+          alt="Close Icon"
+          width={18}
+          height={18}
+        />
+      </button>
     </div>
   );
 }
